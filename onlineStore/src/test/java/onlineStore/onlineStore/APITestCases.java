@@ -37,6 +37,7 @@ public class APITestCases {
 	*/
 
 	DescObject actualData=null;
+	
 	String hyattStationId="";
 	
 	
@@ -49,11 +50,10 @@ public class APITestCases {
 	}
 	
 	@Test
-	public void getKeyForStation(){
+	public void getKeyForStation_HYATTAUSTIN(){
 		boolean validateFound=false;
-		System.out.println("Hello");
-		/*Query for nearest stations to Austin, TX that are part of the “ChargePoint Network”. 
-		 * Verify that “HYATT AUSTIN” appears in the results. Store/save the Station Id of the HYATT AUSTIN station.
+		/*Query for nearest stations to Austin, TX that are part of the “ChargePoint Network”. 1.
+		 * Verify that “HYATT AUSTIN” appears in the results. Store/save the Station Id of the HYATT AUSTIN station. 2.
 		 * 
 		 */
 		
@@ -79,9 +79,6 @@ public class APITestCases {
 		}
 		
 		Assert.assertEquals(true, validateFound,"Validating that the Hyatt Austin station is in the result set");
-		
-		
-		
 	}
 	
 	
