@@ -16,9 +16,9 @@ public class WebRequestUtil {
 	
 	/***
 	 * 
-	 * @param t, The type of object to be returned used to creating the  List<T> 
-	 * @param sEndPoint, the endPoint where the object t will be searched 
-	 * @return the object found that matched the given t object
+	 * @param t, The type of object to be returned 
+	 * @param sEndPoint, the endPoint for the get web request.
+	 * @return the t item
 	 * @throws Exception
 	 */
 	public <T> T  requestBuilderTypeGet(T t,String sEndPoint) throws Exception{
@@ -43,8 +43,6 @@ public class WebRequestUtil {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.setSerializationInclusion(Include.NON_NULL);	
 		//JSON from file to Object
-
-		
 
 		mapper.setSerializationInclusion(Include.NON_NULL);	
 		System.out.println(s);

@@ -47,6 +47,7 @@ public class UITests {
 	public void startBrowserSession() throws Exception{
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		driver.get(common.TestEnvVars.URL);
 		signInKeywords=new SignInKeywords(driver);
 		signInKeywords.signIn( common.TestEnvVars.Username, common.TestEnvVars.Password);			
